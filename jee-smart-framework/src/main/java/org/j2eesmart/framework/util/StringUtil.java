@@ -47,7 +47,7 @@ public final class StringUtil {
 	 * @param dem
 	 * @return
 	 */
-	public static Map<String, String> splitString(String str, String dem1, String dem2) {
+	public static Map<String, ? extends Object> splitString(String str, String dem1, String dem2) {
 		Map<String, String> split = Splitter.on(dem1).omitEmptyStrings().withKeyValueSeparator(dem2).split(str);
 		return split;
 	}

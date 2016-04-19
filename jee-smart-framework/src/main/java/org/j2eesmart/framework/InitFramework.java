@@ -21,7 +21,7 @@ public final class InitFramework {
 	public static void init() {
 		Class<?>[] classList = { ClassLoaderHelper.class, BeanHelper.class, IocHelper.class, ControllerHelper.class };
 		for (Class<?> cls : classList) {
-			ClassLoaderUtil.loadClass(cls.getName(), false);
+			ClassLoaderUtil.loadClass(cls.getName(), true);
 		}
 	}
 
